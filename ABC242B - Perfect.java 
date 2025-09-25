@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m = scanner.nextInt();
+        int k = scanner.nextInt();
+
+        int[] participants = new int[n];
+        Arrays.fill(participants,0);
+
+        List<Integer> winners= new ArrayList<>();
+
+        for (int i = 0; i < k; i++) {
+          int a = scanner.nextInt() - 1;
+          int b = scanner.nextInt();
+          participants[a] += 1;
+
+          if (i >= m-1) {
+            for (int j = 0; j < n; j++) {
+              if (participants[j] == m) {
+                winners.add(j + 1);
+                participants[j] = m + 1;
+              }
+            }
+          }
+        }
+        scanner.close();
+
+        for (int i = 0; i < winners.size(); i++) {
+          if (i == 0) {
+            System.out.print(winners.get(0));
+          } else {
+            System.out.print(" " + winners.get(i));
+          }
+        }
+        if (winners.size() > 0) {
+          System.out.println("");
+        }
+    }
+} 
