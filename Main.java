@@ -5,9 +5,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        String s = scanner.next();
+
         scanner.close();
 
     }
-}    
+}   
+int n = scanner.nextInt();
+String s = scanner.next();
+char[] sArray = scanner.next().toCharArray();
+System.out.println("Yes");
+System.out.println("No");
