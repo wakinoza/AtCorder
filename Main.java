@@ -12,5 +12,10 @@ public class Main {
 int n = scanner.nextInt();
 String s = scanner.next();
 char[] sArray = scanner.next().toCharArray();
-System.out.println("Yes");
-System.out.println("No");
+System.out.println();
+
+if () {
+    System.out.println("Yes");
+} else {
+    System.out.println("No");
+}
